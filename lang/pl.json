@@ -1,0 +1,60 @@
+{
+  "etc/error.php": {
+    "titles": {
+      "err400": "Nieprawidłowe zapytanie",
+      "err401": "Nieautoryzowany dostęp",
+      "err403": "Odmowa dostępu",
+      "err404": "Nie znaleziono strony o podanym adresie",
+      "err406": "Niedozwolone",
+      "err410": "Szukana zawartość została usunięta",
+      "err415": "Nieznany sposób żądania",
+      "err418": "Jestem czajnikiem",
+      "err500": "Wewnętrzny błąd serwera"
+    },
+    "solutions": {
+      "header": "Wybróbuj te rozwiązania",
+      "sol1": {
+        "part1": "Przejdź na",
+        "part2": "stronę główną"
+      },
+      "sol2": "Skontaktuj się z administratorem pisząc pod adres",
+      "sol3": "Zaktualizuj przeglądarkę do najnowszej wersji lub zmień obecną na aktualną",
+      "sol4": "W miarę możliwości skontaktuj się z dostawcą twoich usług internetowych",
+      "sol5": "Spróbuj załadować stronę ponownie za kilka minut",
+      "sol6": "Przechyl mnie i nalej sobie herbaty. :)"
+    },
+    "disclaimer": {
+      "part1": "Jeżeli ten błąd często pokazuje się w tym miejscu, skontaktuj się",
+      "part2": "z administratorem witryny pisząc pod adres email"
+    }
+  },
+  "home.php": {
+    "primary-text": "Mój wspaniały slogan",
+    "content-portal": "Dowiedz się więcej",
+    "section1": {
+      "side-left": {
+        "title": "Tutaj nagłówek",
+        "lore": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam ultricies pulvinar. Sed in euismod risus. Suspendisse gravida, ipsum vel luctus bibendum, diam enim malesuada est, eu eleifend felis lacus in nibh. Ut ac consequat tortor, eu sodales magna. Mauris dictum sapien et nunc finibus, id luctus dui eleifend."
+      },
+      "side-right": {
+        "title": "Tutaj nagłówek",
+        "lore": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam ultricies pulvinar. Sed in euismod risus. Suspendisse gravida, ipsum vel luctus bibendum, diam enim malesuada est, eu eleifend felis lacus in nibh. Ut ac consequat tortor, eu sodales magna. Mauris dictum sapien et nunc finibus, id luctus dui eleifend."
+      }
+    },
+    "section2": {
+      "title": "Tutaj nagłówek",
+      "items": ["Lorem ipsum dolor", "Lorem ipsum dolor", "Lorem ipsum dolor", "Lorem ipsum dolor", "Lorem ipsum dolor", "Lorem ipsum dolor", "Lorem ipsum dolor", "Lorem ipsum dolor", "Lorem ipsum dolor", "Lorem ipsum dolor", "Lorem ipsum dolor", "Lorem ipsum dolor"]
+    },
+    "section3": {
+      "title": "Tutaj nagłówek",
+      "lore": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam ultricies pulvinar. Sed in euismod risus. Suspendisse gravida, ipsum vel luctus bibendum, diam enim malesuada est, eu eleifend felis lacus in nibh. Ut ac consequat tortor, eu sodales magna. Mauris dictum sapien et nunc finibus, id luctus dui eleifend."
+    },
+    "section4": {
+      "title": "Tutaj nagłówek",
+      "lore": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam ultricies pulvinar. Sed in euismod risus. Suspendisse gravida, ipsum vel luctus bibendum, diam enim malesuada est, eu eleifend felis lacus in nibh. Ut ac consequat tortor, eu sodales magna. Mauris dictum sapien et nunc finibus, id luctus dui eleifend."
+    },
+    "section5": {
+      "null": "null"
+    }
+  }
+}

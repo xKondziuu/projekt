@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$mobile: 768px;
+$tablet: 1279px;
+
+* {
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  font-size: 100%;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  padding: 0px;
+  margin: 0px;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+
+header {
+  position: fixed;
+  height: 85px;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  z-index: 9999;
+
+  & nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    & div.navmain-elem {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  }
+
+}
+
+
+h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  font-size: 90px;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+
+  @media only screen and (max-width: $mobile) {
+    font-weight: 500;
+    font-size: 12.5vw;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+  }
+
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 37px;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+
+  @media only screen and (max-width: $mobile) {
+    font-weight: 600;
+    font-size: 5vw;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+  }
+
+}
+
+h3 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: 0px;
+  word-spacing: 3px;
+
+  @media only screen and (max-width: $mobile) {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 4vw;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+  }
+
+}
+
+h4 {
+  font-family: Calibri, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  word-spacing: 2px;
+}
+
+h5 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: 0.1px;
+  word-spacing: 2px;
+  color: #4d4d4d;
+
+  @media only screen and (max-width: $mobile) {
+    font-weight: 600;
+    font-size: 6vw;
+    letter-spacing: 0px;
+    word-spacing: 1px;
+  }
+
+}
+
+
+.mobile-only {
+  display: none;
+  
+  @media only screen and (max-width: $mobile) {
+    display: unset;
+  }
+
+}
+
+
+div.symetric-flex {
+  display: flex;
+  flex-direction: row;
+  
+  & .symflex-side {
+    height: 100%;
+    width: 50%;
+  }
+
+}
+
+
+div.linear-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+
+div.centered-flex {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  @media only screen and (max-width: $mobile) {
+    text-align: left;
+  }
+
+}
+
+
+div.vertical-centered-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+div.grid-table {
+  display: grid;
+}
+@mixin tableg($columns, $rows) {
+  grid-template-columns: repeat($columns, 1fr);
+  grid-template-rows: repeat($rows, 1fr); 
+}
+
+
+hr.hr-slim {
+  height: 1px;
+  min-width: 80px;
+  background: #333;
+}
+
+
+div.homepage-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  z-index: 2;
+
+  & * {
+    z-index: 3;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    height: 45vw;
+    --ptposx: 0px!important;
+    --stposx: 0px!important;
+    --cpposx: 0px!important;
+  }
+
+  &:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background-image: url('/img/picture.jpg');
+    background-position-x: 52%;
+    background-position-y: var(--bgposx);
+    background-size: cover;
+    filter: brightness(0.5);
+    z-index: -1;
+
+    @media only screen and (max-width: $mobile) {
+      filter: brightness(0.55);
+    }
+
+  }
+
+  &:nth-child(4), &:nth-child(5) {
+    height: 35vh;
+    background-color: #fff;
+  }
+
+  &:nth-child(2) {
+    height: auto;
+  }
+
+  &:nth-child(3) {
+    height: auto;
+    padding: 40px 0px;
+    color: #fff;
+  }
+
+  &:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background-image: url('/img/picture.jpg');
+    background-position-x: 52%;
+    background-position-y: calc(var(--bgposx)*2.7);
+    background-size: cover;
+    filter: brightness(0.5)blur(1px);
+    z-index: -1;
+  }
+
+  &:nth-child(6) {
+    background-image: url('/img/picture.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+  }
+
+}
+
+
+div.welcome-wrapper {
+  color: #fff;
+  text-align: center;
+  filter: drop-shadow(0px 0px 5px #333);
+
+  @keyframes welcome-fadein {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -75%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, 0%);
+    }
+  }
+
+  @keyframes arrow {
+    0% { 
+      transform: translate(-50%,var(--cpposx))translateY(0px); 
+    }
+    100% { 
+      transform: translate(-50%,var(--cpposx))translateY(20px); 
+    }
+  }
+
+  @keyframes arrow-text {
+    0% { 
+      transform: translate(-50%,var(--cpposx))translateY(0px); 
+    }
+    100% { 
+      transform: translate(-50%,var(--cpposx))translateY(5px); 
+    }
+  }
+    
+  & .primary-text { 
+    opacity: 0;
+    position: absolute;
+    transform: translate(-50%,var(--ptposx))!important;
+    transition: transform .1s cubic-bezier(0, 0.5, 0, 1);
+    animation: welcome-fadein 0.75s cubic-bezier(0.5, 0.5, 0.3, 0.8) forwards;
+    left: 50%;
+    top: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    @media only screen and (max-width: $mobile) {
+      hr {
+        width: 65vw;
+        margin-top: 2.8vw;
+        background: #b1b1b1;
+        opacity: .8;
+      }
+    }
+
+  }
+
+  & .secondary-text {
+    opacity: 0;
+    position: absolute;
+    transform: translate(-50%,var(--stposx))!important;
+    transition: transform .1s cubic-bezier(0, 0.5, 0, 1);
+    animation: welcome-fadein 0.55s ease-out forwards 0.2s;
+    left: 50%;
+    top: 68vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    @media only screen and (max-width: $mobile) {
+      top: 32vw;
+      flex-direction: row;
+      width: 100%;
+      gap: 8vw;
+    }
+
+    & > div {
+      gap: 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      transition: all .5s ease;
+
+      & svg {
+        height: 3rem;
+        fill: #fff;
+        opacity: .85;
+
+        @media only screen and (max-width: $mobile) {
+          display: none;
+        }
+
+      }
+
+    }
+
+  }
+
+  & .content-portal {
+    position: absolute;
+    animation: arrow 1s infinite alternate;
+    transform: translate(-50%,var(--cpposx))!important;
+    transition: transform .1s cubic-bezier(0, 0.5, 0, 1);
+    left: 50%;
+    top: 85vh;
+
+    @media only screen and (max-width: $mobile) {
+      display: none;
+    }
+    
+    & button {
+      color: #fff;
+      width: 200px;
+      height: auto;
+      cursor: pointer;
+      padding: 20px 0px;
+      transform: translate(0,calc(var(--cpposx)*1.2))!important;
+      background: transparent;
+
+      & h4 {
+        user-select: none;
+        animation: arrow-text 1s infinite alternate;
+        margin-left: 50%;
+        width: 100%;
+      }
+      
+      & svg {
+        width: 28%;
+        fill: #fff;
+      }
+
+    }
+
+  }
+}
+
+
+div.webpage-aligned {
+  padding-left: 8%;
+  padding-right: 8%;
+  width: fit-content;
+
+  @media only screen and (max-width: $mobile) {
+    padding-left: unset;
+    padding-right: unset;
+  }
+
+}
+
+
+div.homepage-textlore, div.homepage-txtimglore {
+  @media only screen and (max-width: $tablet) {
+    flex-direction: column;
+  }
+
+  & .textlore-content {
+    text-align: center;
+    align-items: center;
+    padding: 35px 25px;
+
+    @media only screen and (max-width: $tablet) {
+      width: 100%;
+    }
+
+    & hr {
+      width: 15%;
+      margin: 15px 0px;
+    }
+  
+    & span {
+      font-family: Calibri, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      word-spacing: 2px;
+
+      @media only screen and (max-width: $mobile) {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 4vw;
+        word-spacing: 1px;
+      }
+
+    }
+
+  }
+
+}
+
+div.homepage-products {
+  flex-direction: column;
+
+  & .grid-table {
+    @include tableg(4, 3);
+    width: 95%;
+
+    @media only screen and (max-width: 1440px) {
+      @include tableg(3, 4);
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 1130px) {
+      @include tableg(2, 6);
+    }
+
+    /*@media only screen and (max-width: $mobile) {
+      @include tableg(1, 6);
+      overflow-x: hidden;
+      width: 100%;
+    }*/
+    
+    & .grid-elem {
+      margin: 24px 0px;
+      
+      /*@media only screen and (max-width: $mobile) {
+        &:nth-child(7), &:nth-child(8), &:nth-child(9), 
+        &:nth-child(10), &:nth-child(11), &:nth-child(12) {
+          display: none;
+        }
+      }*/
+
+    }
+    
+    & span {
+      font-family: 'Noto Sans', Arial, sans-serif;
+      font-weight: 500;
+      font-size: 22px;
+      word-spacing: 2.5px;
+      width: 30%;
+
+      @media only screen and (max-width: $mobile) {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 4vw;
+        word-spacing: 1px;
+      }
+
+    }
+
+  }
+
+  hr {
+    width: 4%;
+    margin: 15px 0px;
+    background: #fff;
+  
+    @media only screen and (max-width: $mobile) {
+      opacity: .8;
+    }
+  
+  }
+
+  h5 {
+    font-size: 36px;
+    color: #fff;
+
+    @media only screen and (max-width: $mobile) {
+      font-size: 6vw;
+    }
+
+  }
+
+}
