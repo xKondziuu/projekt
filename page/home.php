@@ -83,4 +83,4 @@
   </div>
 </div> -->
 
-<script type="text/javascript" src="http://<?= $hostname ?>/js/parallax-scrolling.js"></script>
+<script type="text/javascript" src="https://<?= $hostname ?>/js/parallax-scrolling.js"></script>
