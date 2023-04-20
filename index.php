@@ -101,14 +101,14 @@ ob_start(); ?>
 	<!----> <meta name="robots" content="noindex nofollow">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="http://<?=$hostname?>/scss/css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://<?=$hostname?>/scss/css/style.css">
 	<?php if($_GET['locale']){echo '<script type="text/javascript">history.replaceState({}, document.title, window.location.href.split("?")[0])</script>';} ?>
-	<link rel="icon" type="image/x-icon" href="http://<?= $hostname ?>/img/favicon.ico" />
-	<script type="text/javascript" src="http://<?= $hostname ?>/js/jquery.min.js"></script>
+	<link rel="icon" type="image/x-icon" href="https://<?= $hostname ?>/img/favicon.ico" />
+	<script type="text/javascript" src="https://<?= $hostname ?>/js/jquery.min.js"></script>
 </head>
 <body dir="ltr" id="content">
 	<?php include 'page/'.$pathname.'.php'; ?>
-	<script type="text/javascript" src="http://<?= $hostname ?>/js/butter.js"></script>
+	<script type="text/javascript" src="https://<?= $hostname ?>/js/butter.js"></script>
 	<script type="text/javascript">butter.init({wrapperDamper: 0.07, cancelOnTouch: true, wrapperId: 'content'});</script>
 	<div id="info" style="display: block; border: 3px solid #f00; height: 200px; width: 330px; padding: 5px; background: rgba(0, 0, 0, 0.25); color: #fff; position: fixed; top: 0; z-index: 999999;">
 		<span>Wzór strony internetowej</span><a href="javascript:void(0)" onclick="this.parentNode.style.display='none'" style="color: #fff; font-weight: bold; float: right;">Ukryj</a>
